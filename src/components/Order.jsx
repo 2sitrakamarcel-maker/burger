@@ -1,9 +1,14 @@
 import React from 'react'
-import { Link } from 'react-router-dom'
+import { Link, useParams } from 'react-router-dom'
 
- const Order = () => {
+ const Order = ({ nom }) => {
+  const { inputValue } = useParams()
+
   return (
-    <div><Link to="/"><button>Order</button></Link></div>
+    <div>
+      <h1>Bienvenue dans votre espace {nom}</h1>
+      <h2>ducon {inputValue + "lasalope"}</h2>
+      <Link to="/"><button>Order</button></Link></div>
   )
 }
 
