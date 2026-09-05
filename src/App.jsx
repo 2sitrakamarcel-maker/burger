@@ -3,14 +3,15 @@ import  Things  from "./components/Things";
 //state
 export default function Home(){
 
- const [name, setName] = useState("")
+ const [name, setName] = useState("") 
  
  function handleSubmit(name){
  if(!name.trim()) return alert("Veuillez entrer votre nom...BATARD!!");   
   alert(`Bonjour ${name}!`)
     setName("")
   }
-  
+  const handleCHange = (e) => { setName(e.target.value) }
+ 
 
 //affichage
 return (
@@ -23,7 +24,8 @@ return (
      type="text"
      placeholder="Entrer votre nom"
      value={name}
-     onChange={(e) => setName(e.target.value)}
+     onChange={handleCHange}
+     required
     />
     <button >Accéder à mon espace </button>
     
@@ -33,5 +35,6 @@ return (
 
 )
 }
+
 
 
