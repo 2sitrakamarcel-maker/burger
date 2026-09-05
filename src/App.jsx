@@ -1,4 +1,5 @@
 import { useState } from "react";
+import  Things  from "./components/Things";
 //state
 export default function Home(){
 
@@ -25,8 +26,12 @@ return (
      onChange={(e) => setName(e.target.value)}
     />
     <button >Accéder à mon espace </button>
+    
   </form>
+    <Things />
   </div>
 
 )
 }
+
+
